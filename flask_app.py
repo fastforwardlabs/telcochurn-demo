@@ -14,7 +14,7 @@ from churnexplainer.explainedmodel import ExplainedModel
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 
-em = ExplainedModel(os.environ['CHURN_MODEL_NAME'])
+em = ExplainedModel(os.getenv('CHURN_MODEL_NAME', '20191008T175641_ibm_linear'))
 
 app= Flask(__name__,static_url_path='')
 @app.route('/')
@@ -132,4 +132,4 @@ HTML("<a href='https://{}.{}'>Open Table View</a>".format(os.environ['CDSW_ENGIN
 
 
 if __name__=="__main__":
-    app.run(host=os.environ['CDSW_IP_ADDRESS'], port=os.environ['CDSW_PUBLIC_PORT'])
+    app.run(host='127.0.0.1', port=os.environ['CDSW_READONLY_PORT'])
