@@ -1,6 +1,7 @@
 #!/bin/bash
 
-pip3 install -r requirements.txt
+#pip3 install -r requirements3.txt
+pip3 install sklearn dill lime
 
 if [ ! -d "models" ] 
 then

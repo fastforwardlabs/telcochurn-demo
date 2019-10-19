@@ -8,7 +8,7 @@ sys.path.append("/home/cdsw")
 from churnexplainer.utils import log_environment
 from churnexplainer.explainedmodel import ExplainedModel
 
-em = ExplainedModel(os.getenv('CHURN_MODEL_NAME', '20191008T175641_ibm_linear'))
+em = ExplainedModel(os.getenv('CHURN_MODEL_NAME', 'test_model'))
 
 def explain(args):
     #data = dict(ChainMap(request.args, em.default_data))
