@@ -18,3 +18,5 @@ fi
 
 #echo "models/$CHURN_MODEL_NAME/$CHURN_MODEL_FILE"
 #ls echo models/$CHURN_MODEL_NAME/$CHURN_MODEL_FILE
+
+if [[ ! -d /home/cdsw/R ]]; then mkdir -m 755 /home/cdsw/R; fi
