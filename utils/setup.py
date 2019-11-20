@@ -8,4 +8,4 @@ cd
 !cp /home/cdsw/utils/cdsw-build.sh .
 !chmod 755 /home/cdsw/cdsw-build.sh
 !bash /home/cdsw/cdsw-build.sh
-!Rscript /home/cdsw/utils/install.R
+#!Rscript /home/cdsw/utils/install.R
