@@ -89,9 +89,10 @@ can see how adjusting any one of the features will change the instance's churn p
 ## Additional options
 By default this code trains a linear regression model against the IBM dataset.
 There are other datasets and other model types as well.  Set the Project environment variables to try other 
-datasets and models:
-Name              Value
-CHURN_DATASET     ibm (default) | breastcancer | iris 
-CHURN_MODEL_TYPE  linear (default) | gb | nonlinear | voting
+datasets and models:  
+Name              Value  
+CHURN_DATASET     ibm (default) | breastcancer | iris  
+CHURN_MODEL_TYPE  linear (default) | gb | nonlinear | voting  
+
 
 **NOTE** that not all of these options have been fully tested so your mileage may vary.
