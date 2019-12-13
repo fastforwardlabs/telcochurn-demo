@@ -9,7 +9,7 @@ This project uses the Applications feature of CML (>=1.2) and CDSW (>=1.7) to in
 
 ### Train a predictor model
 A model has been pre-trained and placed in the models directory.  
-Start a Python 3 Session with at least 8GB of memory and run utils/setup.py.  This will create the minimum setup to use existing, pretrained models.  
+Start a Python 3 Session with at least 8GB of memory and __run utils/setup.py__.  This will create the minimum setup to use existing, pretrained models.  
 
 If you want to retrain the model start a Session with at least 8GB memory and run:  
 ```!pip3 install -r utils/requirements3.txt```
