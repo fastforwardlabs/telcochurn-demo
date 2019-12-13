@@ -1,22 +1,24 @@
 #!/bin/bash
 
-#pip3 install -r requirements3.txt
-pip3 install sklearn dill lime
+pip3 install -r utils/requirements3.txt
 
 if [ ! -d "models" ] 
 then
   mkdir models
 fi
 
-CHURN_MODEL_FILE="$CHURN_MODEL_NAME.pkl"
+if [ $CHURN_MODEL_NAME ]
+then
+  CHURN_MODEL_FILE="$CHURN_MODEL_NAME.pkl"
 
-if [ -f $CHURN_MODEL_FILE ]
-then 
-  mkdir models/$CHURN_MODEL_NAME
-  mv $CHURN_MODEL_FILE models/$CHURN_MODEL_NAME
+  if [ -f $CHURN_MODEL_FILE ]
+  then 
+    mkdir models/$CHURN_MODEL_NAME
+    mv $CHURN_MODEL_FILE models/$CHURN_MODEL_NAME
+  fi
 fi
 
-#echo "models/$CHURN_MODEL_NAME/$CHURN_MODEL_FILE"
-#ls echo models/$CHURN_MODEL_NAME/$CHURN_MODEL_FILE
-
-if [[ ! -d /home/cdsw/R ]]; then mkdir -m 755 /home/cdsw/R; fi
+if [[ ! -d /home/cdsw/R ]]
+then 
+  mkdir -m 755 /home/cdsw/R
+fi
