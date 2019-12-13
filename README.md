@@ -1,22 +1,22 @@
 # Refractor (or churnexplainer)
 
-This is the CML port of the Refractor prototype the is part of the [Interpretability
+This is the CML port of the Refractor prototype which is part of the [Interpretability
 report from Cloudera Fast Forward Labs](https://clients.fastforwardlabs.com/ff06/report).
 
 ## CML Applications: Train and inspect a new model locally
 
-This processes uses the Applications feature of CML (>=1.2) to instantiate a UI frontend for visual interpretability and   decision management. 
+This project uses the Applications feature of CML (>=1.2) and CDSW (>=1.7) to instantiate a UI frontend for visual interpretability and decision management.  
 
 ### Train a predictor model
 A model has been pre-trained and placed in the models directory.  
-Start a Python 3 Session with at least 8GB of memory and run utils/setup.py.  This will do the minimum setup to use existing, pretrained models.  
+Start a Python 3 Session with at least 8GB of memory and run utils/setup.py.  This will create the minimum setup to use existing, pretrained models.  
 
 If you want to retrain the model start a Session with at least 8GB memory and run:  
-!pip3 install -r utils/requirements3.txt  
+```!pip3 install -r utils/requirements3.txt```
 
 After installing requirements run the train.py code to train a new model.  
 
-The model artifact will be saved a in the models directory named after the datestamp of training (ie. 20191120T161757_ibm_linear). The default settings will create a linear regression model against the IBM dataset. However, the code is vary modular and can train multiple model types against essentially any tabular dataset.  
+The model artifact will be saved in the models directory named after the datestamp, dataset and algorithm of training (ie. 20191120T161757_ibm_linear). The default settings will create a linear regression model against the IBM telco dataset. However, the code is vary modular and can train multiple model types against essentially any tabular dataset.  
 
 Look at train_multiple.py for examples.  
 
