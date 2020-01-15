@@ -6,11 +6,10 @@ from churnexplainer import train
 from churnexplainer.data import dataset, load_dataset
 import cdsw
 
-
-#os.environ["CHURN_MODEL_TYPE"] =  "linear" #| bg | nonlinear | voting"
-os.environ["CHURN_MODEL_TYPE"] = sys.argv[1]
-#os.environ["CHURN_DATASET"] = "ibm" #| breastcancer | iris | telco"
-os.environ["CHURN_DATASET"] = sys.argv[2]
+#os.gentenv('CHURN_MODEL_TYPE', 'linear') #| gb | nonlinear | voting"
+os.gentenv('CHURN_MODEL_TYPE', sys.argv[1])
+#os.gentenv('CHURN_DATASET', 'ibm') #| breastcancer | iris | telco
+os.gentenv('CHURN_DATASET', sys.argv[2])
 
 train_score, test_score, model_path = train.experiment_and_save()
 
